@@ -1,3 +1,4 @@
+// Webservice => Service
 
 import 'dart:convert';
 
@@ -8,7 +9,7 @@ class Webservice {
 
   Future<List<Movie>> fetchMovies(String keyword) async {
 
-    final url = "http://www.omdbapi.com/?s=$keyword&apikey=YOURAPIKEY";
+    final url = "http://www.omdbapi.com/?s=$keyword&apikey=f3ccb078";
     final response = await http.get(url);
     if(response.statusCode == 200) {
 

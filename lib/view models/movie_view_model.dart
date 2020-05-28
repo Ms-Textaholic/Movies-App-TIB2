@@ -12,7 +12,11 @@ class MovieViewModel {
   }
 
   String get poster {
-    return this.movie.poster; 
+    return this.movie.poster;
+  }
+
+  String get genre {
+    return this.movie.genre;
   }
 
 }

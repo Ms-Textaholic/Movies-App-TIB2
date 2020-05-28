@@ -1,3 +1,4 @@
+//MovieListPage => ListPage
 
 import 'package:flutter/material.dart';
 import 'package:movies_app/view%20models/movie_list_view_model.dart';
@@ -27,7 +28,19 @@ class _MovieListPageState extends State<MovieListPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Movies")
+        elevation: 0.3,
+        centerTitle: true,
+        backgroundColor: Colors.purpleAccent,
+        leading: Icon(
+          Icons.arrow_back,
+          color: Colors.purple,
+        ),
+        title: Text(
+          'The Idiot Box',
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
       ),
       body: Container(
         padding: EdgeInsets.all(10),
@@ -37,7 +50,7 @@ class _MovieListPageState extends State<MovieListPage> {
           Container(
             padding: EdgeInsets.only(left: 10),
             decoration: BoxDecoration(
-              color: Colors.grey, 
+              color: Colors.grey[400],
               borderRadius: BorderRadius.circular(10)
             ),
             child: TextField(
@@ -48,15 +61,15 @@ class _MovieListPageState extends State<MovieListPage> {
                   _controller.clear();
                 }
               },
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
-                hintText: "Search", 
-                hintStyle: TextStyle(color: Colors.white),
+                hintText: "Search",
+                hintStyle: TextStyle(color: Colors.blueGrey),
                 border: InputBorder.none
               ),
 
             ),
-          ), 
+          ),
           Expanded(
             child: MovieList(movies: vm.movies))
         ])

@@ -1,3 +1,4 @@
+// MovieList => Item
 
 import 'package:flutter/material.dart';
 import 'package:movies_app/view%20models/movie_view_model.dart';
@@ -26,7 +27,7 @@ class MovieList extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(6)
             ),
-            width: 50, 
+            width: 50,
             height: 100,
             ),
           title: Text(movie.title),
